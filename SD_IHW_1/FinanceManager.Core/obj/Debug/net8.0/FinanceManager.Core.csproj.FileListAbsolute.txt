@@ -1,0 +1,12 @@
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/bin/Debug/net8.0/FinanceManager.Core.deps.json
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/bin/Debug/net8.0/FinanceManager.Core.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/bin/Debug/net8.0/FinanceManager.Core.pdb
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.csproj.AssemblyReference.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.AssemblyInfoInputs.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.AssemblyInfo.cs
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.csproj.CoreCompileInputs.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/refint/FinanceManager.Core.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/FinanceManager.Core.pdb
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/obj/Debug/net8.0/ref/FinanceManager.Core.dll

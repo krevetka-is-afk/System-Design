@@ -1,0 +1,17 @@
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.csproj.AssemblyReference.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.AssemblyInfoInputs.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.AssemblyInfo.cs
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/bin/Debug/net8.0/FinanceManager.Infrastructure.deps.json
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/bin/Debug/net8.0/FinanceManager.Infrastructure.runtimeconfig.json
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/bin/Debug/net8.0/FinanceManager.Infrastructure.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/bin/Debug/net8.0/FinanceManager.Infrastructure.pdb
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/bin/Debug/net8.0/FinanceManager.Core.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/bin/Debug/net8.0/FinanceManager.Core.pdb
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceM.5E5C836B.Up2Date
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/refint/FinanceManager.Infrastructure.dll
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.pdb
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/FinanceManager.Infrastructure.genruntimeconfig.cache
+/Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/obj/Debug/net8.0/ref/FinanceManager.Infrastructure.dll

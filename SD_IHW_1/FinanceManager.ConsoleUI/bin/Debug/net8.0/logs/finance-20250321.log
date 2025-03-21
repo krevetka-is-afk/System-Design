@@ -1,0 +1,570 @@
+2025-03-21T23:01:00.2105350+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""PRAGMA journal_mode = 'wal';" (0723d8ff)
+2025-03-21T23:01:00.2399570+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"__EFMigrationsHistory\" (
+    \"MigrationId\" TEXT NOT NULL CONSTRAINT \"PK___EFMigrationsHistory\" PRIMARY KEY,
+    \"ProductVersion\" TEXT NOT NULL
+);" (0723d8ff)
+2025-03-21T23:01:00.2446180+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:01:00.2460710+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:01:00.2513540+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:01:58.8417000+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:01:58.8505660+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:01:58.8551220+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:01:58.8600510+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:04:11.9274160+03:00  [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:04:11.9374630+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:04:11.9425500+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:04:11.9484510+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:18:35.3449710+03:00  [ERR] Failed executing DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 3), @p4='?' (DbType = DateTime), @p5='?' (Size = 3)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"BankAccounts\" (\"Id\", \"Balance\", \"CreatedAt\", \"Currency\", \"LastModifiedAt\", \"Name\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (627a98df)
+2025-03-21T23:18:35.3538860+03:00  [ERR] An exception occurred in the database while saving changes for context type '"FinanceManager.Infrastructure.Data.FinanceDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.AddAsync(BankAccount entity) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 37
+   at FinanceManager.Core.Services.FinanceService.CreateAccountAsync(String name, String currency, Decimal initialBalance) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 40
+2025-03-21T23:18:35.3560980+03:00  [ERR] Failed to create bank account: "ыук" (a8c37e7b)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.AddAsync(BankAccount entity) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 37
+   at FinanceManager.Core.Services.FinanceService.CreateAccountAsync(String name, String currency, Decimal initialBalance) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 40
+   at FinanceManager.ConsoleUI.Services.ConsoleService.CreateAccountAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.ConsoleUI/Services/ConsoleService.cs:line 57
+2025-03-21T23:18:35.3565620+03:00  [ERR] Error creating account (696392d8)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.AddAsync(BankAccount entity) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 37
+   at FinanceManager.Core.Services.FinanceService.CreateAccountAsync(String name, String currency, Decimal initialBalance) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 40
+   at FinanceManager.ConsoleUI.Services.ConsoleService.CreateAccountAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.ConsoleUI/Services/ConsoleService.cs:line 57
+2025-03-21T23:20:26.8450050+03:00  [ERR] Failed executing DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (627a98df)
+2025-03-21T23:20:26.8461030+03:00  [ERR] An exception occurred while iterating over the results of a query for context type '"FinanceManager.Infrastructure.Data.FinanceDbContext"'."
+""Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()" (f5c7ac34)
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+2025-03-21T23:20:26.8468540+03:00  [ERR] Error listing accounts (9d8aaf34)
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.GetAllAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 31
+   at FinanceManager.Core.Services.FinanceService.GetAllAccountsAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 58
+   at FinanceManager.ConsoleUI.Services.ConsoleService.ListAccountsAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.ConsoleUI/Services/ConsoleService.cs:line 79
+2025-03-21T23:26:23.4802440+03:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:26:23.4898580+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:26:23.4950530+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:26:23.5016210+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:26:50.4556920+03:00  [ERR] Failed executing DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 3), @p4='?' (DbType = DateTime), @p5='?' (Size = 4)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"BankAccounts\" (\"Id\", \"Balance\", \"CreatedAt\", \"Currency\", \"LastModifiedAt\", \"Name\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (627a98df)
+2025-03-21T23:26:50.4636510+03:00  [ERR] An exception occurred in the database while saving changes for context type '"FinanceManager.Infrastructure.Data.FinanceDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.AddAsync(BankAccount entity) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 37
+   at FinanceManager.Core.Services.FinanceService.CreateAccountAsync(String name, String currency, Decimal initialBalance) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 40
+2025-03-21T23:26:50.4658100+03:00  [ERR] Failed to create bank account: "serg" (a8c37e7b)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.AddAsync(BankAccount entity) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 37
+   at FinanceManager.Core.Services.FinanceService.CreateAccountAsync(String name, String currency, Decimal initialBalance) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 40
+   at FinanceManager.ConsoleUI.Services.ConsoleService.CreateAccountAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.ConsoleUI/Services/ConsoleService.cs:line 57
+2025-03-21T23:26:50.4662480+03:00  [ERR] Error creating account (696392d8)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: BankAccounts'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements()+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.AddAsync(BankAccount entity) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 37
+   at FinanceManager.Core.Services.FinanceService.CreateAccountAsync(String name, String currency, Decimal initialBalance) in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 40
+   at FinanceManager.ConsoleUI.Services.ConsoleService.CreateAccountAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.ConsoleUI/Services/ConsoleService.cs:line 57
+2025-03-21T23:28:24.2873400+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:28:24.2964860+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:28:24.3004990+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:28:24.3061610+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:28:50.8804290+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 3), @p4='?' (DbType = DateTime), @p5='?' (Size = 4)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"BankAccounts\" (\"Id\", \"Balance\", \"CreatedAt\", \"Currency\", \"LastModifiedAt\", \"Name\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2025-03-21T23:28:50.8841300+03:00  [INF] Added bank account: "serg" (d4bafc92)
+2025-03-21T23:28:50.8841680+03:00  [INF] Created bank account: "serg" (91be2f59)
+2025-03-21T23:29:10.3278070+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:29:39.9015760+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (DbType = DateTime), @p3='?' (Size = 3), @p4='?' (DbType = DateTime), @p5='?' (Size = 5)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"BankAccounts\" (\"Id\", \"Balance\", \"CreatedAt\", \"Currency\", \"LastModifiedAt\", \"Name\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);" (0723d8ff)
+2025-03-21T23:29:39.9017720+03:00  [INF] Added bank account: "nadya" (d4bafc92)
+2025-03-21T23:29:39.9018140+03:00  [INF] Created bank account: "nadya" (91be2f59)
+2025-03-21T23:31:20.4604870+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:33:32.6904060+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 12), @p3='?' (Size = 6), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Categories\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"Type\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2025-03-21T23:33:32.6910470+03:00  [INF] Added category: "salary" (0a59a2a8)
+2025-03-21T23:33:32.6911250+03:00  [INF] Created category: "salary" (Income) (bb9f90e3)
+2025-03-21T23:35:14.0656470+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 11)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Operations\" (\"Id\", \"AccountId\", \"Amount\", \"CategoryId\", \"CreatedAt\", \"Date\", \"Description\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2025-03-21T23:35:14.0660590+03:00  [INF] Added operation: ¤1,000,000.00 for account d0f02e7d-69dc-4a61-ab04-83b999ffc387 (b3e40c5a)
+2025-03-21T23:35:14.0720180+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p5='?' (DbType = Guid), @p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (Size = 3), @p3='?' (DbType = DateTime), @p4='?' (Size = 4)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"BankAccounts\" SET \"Balance\" = @p0, \"CreatedAt\" = @p1, \"Currency\" = @p2, \"LastModifiedAt\" = @p3, \"Name\" = @p4
+WHERE \"Id\" = @p5
+RETURNING 1;" (0723d8ff)
+2025-03-21T23:35:14.0735500+03:00  [INF] Updated bank account: "serg" (5a77355c)
+2025-03-21T23:35:14.0735930+03:00  [INF] Updated balance for account "serg": ¤1,000,000.00 (8c577bae)
+2025-03-21T23:35:14.0736170+03:00  [INF] Created operation: ¤1,000,000.00 for account d0f02e7d-69dc-4a61-ab04-83b999ffc387 (fae87969)
+2025-03-21T23:35:21.0949900+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:36:11.8897350+03:00  [ERR] Error viewing balance (fd883ab6)
+System.NotSupportedException: SQLite cannot apply aggregate operator 'Sum' on expressions of type 'decimal'. Convert the values to a supported type, or use LINQ to Objects to aggregate the results on the client side.
+   at Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteQueryableAggregateMethodTranslator.Translate(MethodInfo method, EnumerableExpression source, IReadOnlyList`1 arguments, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Query.RelationalAggregateMethodCallTranslatorProvider.<>c__DisplayClass6_0.<Translate>b__0(IAggregateMethodCallTranslator t)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Func`2 predicate, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Microsoft.EntityFrameworkCore.Query.RelationalAggregateMethodCallTranslatorProvider.Translate(IModel model, MethodInfo method, EnumerableExpression source, IReadOnlyList`1 arguments, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateAggregateMethod(EnumerableExpression enumerableExpression, MethodInfo method, List`1 scalarArguments)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TryTranslateAggregateMethodCall(MethodCallExpression methodCallExpression, SqlExpression& translation)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Sqlite.Query.Internal.SqliteSqlTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateInternal(Expression expression, Boolean applyDefaultTypeMapping)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.Translate(Expression expression, Boolean applyDefaultTypeMapping)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateAggregateWithSelector(ShapedQueryExpression source, LambdaExpression selectorLambda, Func`2 methodGenerator, Boolean throwWhenEmpty, Type resultType)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateSum(ShapedQueryExpression source, LambdaExpression selector, Type resultType)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.SumAsync[TSource](IQueryable`1 source, Expression`1 selector, CancellationToken cancellationToken)
+   at FinanceManager.Infrastructure.Repositories.BankAccountRepository.GetTotalBalanceAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Infrastructure/Repositories/BankAccountRepository.cs:line 62
+   at FinanceManager.Core.Services.FinanceService.GetTotalBalanceAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.Core/Services/FinanceService.cs:line 73
+   at FinanceManager.ConsoleUI.Services.ConsoleService.ViewBalanceAsync() in /Users/sergejrastvorov/RiderProjects/SD_IHW_1/FinanceManager.ConsoleUI/Services/ConsoleService.cs:line 304
+2025-03-21T23:37:32.9342000+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:37:32.9429120+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:37:32.9473630+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:37:32.9526050+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:37:52.7646710+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:38:03.9944710+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:38:17.0719730+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:38:20.4440140+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:38:26.2796650+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:38:26.3259880+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:38:26.3271700+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:39:06.9260120+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:39:06.9310890+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Id\", \"c\".\"CreatedAt\", \"c\".\"Description\", \"c\".\"Name\", \"c\".\"Type\"
+FROM \"Categories\" AS \"c\"" (0723d8ff)
+2025-03-21T23:39:06.9400420+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:40:29.8483120+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:40:29.8486530+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Id\", \"c\".\"CreatedAt\", \"c\".\"Description\", \"c\".\"Name\", \"c\".\"Type\"
+FROM \"Categories\" AS \"c\"" (0723d8ff)
+2025-03-21T23:40:29.8487830+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:41:14.6478030+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:41:14.6575920+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:41:14.6622480+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:41:14.6683610+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:41:22.4635010+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:43:01.9169800+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Operations\" (\"Id\", \"AccountId\", \"Amount\", \"CategoryId\", \"CreatedAt\", \"Date\", \"Description\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2025-03-21T23:43:01.9207910+03:00  [INF] Added operation: ¤100,000.00 for account d9d5e5e2-d966-4d51-b73b-4f0f96f1d048 (b3e40c5a)
+2025-03-21T23:43:01.9249770+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p5='?' (DbType = Guid), @p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (Size = 3), @p3='?' (DbType = DateTime), @p4='?' (Size = 5)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"BankAccounts\" SET \"Balance\" = @p0, \"CreatedAt\" = @p1, \"Currency\" = @p2, \"LastModifiedAt\" = @p3, \"Name\" = @p4
+WHERE \"Id\" = @p5
+RETURNING 1;" (0723d8ff)
+2025-03-21T23:43:01.9261060+03:00  [INF] Updated bank account: "nadya" (5a77355c)
+2025-03-21T23:43:01.9261340+03:00  [INF] Updated balance for account "nadya": ¤100,000.00 (8c577bae)
+2025-03-21T23:43:01.9261620+03:00  [INF] Created operation: ¤100,000.00 for account d9d5e5e2-d966-4d51-b73b-4f0f96f1d048 (fae87969)
+2025-03-21T23:43:06.5845360+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:44:22.0857400+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 5), @p3='?' (Size = 13), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Categories\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"Type\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2025-03-21T23:44:22.0863360+03:00  [INF] Added category: "grocery store" (0a59a2a8)
+2025-03-21T23:44:22.0863920+03:00  [INF] Created category: "grocery store" (Expense) (bb9f90e3)
+2025-03-21T23:45:33.6171180+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Operations\" (\"Id\", \"AccountId\", \"Amount\", \"CategoryId\", \"CreatedAt\", \"Date\", \"Description\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2025-03-21T23:45:33.6176740+03:00  [INF] Added operation: ¤100,343.00 for account d0f02e7d-69dc-4a61-ab04-83b999ffc387 (b3e40c5a)
+2025-03-21T23:45:33.6187620+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p5='?' (DbType = Guid), @p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (Size = 3), @p3='?' (DbType = DateTime), @p4='?' (Size = 4)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"BankAccounts\" SET \"Balance\" = @p0, \"CreatedAt\" = @p1, \"Currency\" = @p2, \"LastModifiedAt\" = @p3, \"Name\" = @p4
+WHERE \"Id\" = @p5
+RETURNING 1;" (0723d8ff)
+2025-03-21T23:45:33.6191670+03:00  [INF] Updated bank account: "serg" (5a77355c)
+2025-03-21T23:45:33.6192100+03:00  [INF] Updated balance for account "serg": ¤100,343.00 (8c577bae)
+2025-03-21T23:45:33.6192360+03:00  [INF] Created operation: ¤100,343.00 for account d0f02e7d-69dc-4a61-ab04-83b999ffc387 (fae87969)
+2025-03-21T23:45:39.0803450+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:45:45.7502000+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:45:45.7915020+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:45:45.7934970+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:46:24.7049470+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 7), @p3='?' (Size = 7), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Categories\" (\"Id\", \"CreatedAt\", \"Description\", \"Name\", \"Type\")
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2025-03-21T23:46:24.7052720+03:00  [INF] Added category: "expense" (0a59a2a8)
+2025-03-21T23:46:24.7052980+03:00  [INF] Created category: "expense" (Expense) (bb9f90e3)
+2025-03-21T23:46:38.3801070+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:47:18.0903830+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:49:35.0240870+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 10)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Operations\" (\"Id\", \"AccountId\", \"Amount\", \"CategoryId\", \"CreatedAt\", \"Date\", \"Description\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2025-03-21T23:49:35.0242800+03:00  [INF] Added operation: ¤666.00 for account d9d5e5e2-d966-4d51-b73b-4f0f96f1d048 (b3e40c5a)
+2025-03-21T23:49:35.0247240+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p5='?' (DbType = Guid), @p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (Size = 3), @p3='?' (DbType = DateTime), @p4='?' (Size = 5)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"BankAccounts\" SET \"Balance\" = @p0, \"CreatedAt\" = @p1, \"Currency\" = @p2, \"LastModifiedAt\" = @p3, \"Name\" = @p4
+WHERE \"Id\" = @p5
+RETURNING 1;" (0723d8ff)
+2025-03-21T23:49:35.0249910+03:00  [INF] Updated bank account: "nadya" (5a77355c)
+2025-03-21T23:49:35.0250400+03:00  [INF] Updated balance for account "nadya": ¤666.00 (8c577bae)
+2025-03-21T23:49:35.0250550+03:00  [INF] Created operation: ¤666.00 for account d9d5e5e2-d966-4d51-b73b-4f0f96f1d048 (fae87969)
+2025-03-21T23:49:49.4524400+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:49:49.4532440+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:49:49.4535030+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:50:20.1816200+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:50:26.5571140+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:52:58.8149040+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:52:58.8188430+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Id\", \"c\".\"CreatedAt\", \"c\".\"Description\", \"c\".\"Name\", \"c\".\"Type\"
+FROM \"Categories\" AS \"c\"" (0723d8ff)
+2025-03-21T23:52:58.8193970+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:55:58.8310910+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:55:58.8405970+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"name\" = '__EFMigrationsHistory' AND \"type\" = 'table';" (0723d8ff)
+2025-03-21T23:55:58.8455310+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";" (0723d8ff)
+2025-03-21T23:55:58.8511330+03:00  [INF] No migrations were applied. The database is already up to date. (503cba9d)
+2025-03-21T23:56:04.4189260+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:57:02.8322380+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Id\", \"c\".\"CreatedAt\", \"c\".\"Description\", \"c\".\"Name\", \"c\".\"Type\"
+FROM \"Categories\" AS \"c\"
+WHERE \"c\".\"Id\" = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2025-03-21T23:57:24.5053050+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Decimal), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 5)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"Operations\" (\"Id\", \"AccountId\", \"Amount\", \"CategoryId\", \"CreatedAt\", \"Date\", \"Description\")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);" (0723d8ff)
+2025-03-21T23:57:24.5091460+03:00  [INF] Added operation: (¤443.00) for account d0f02e7d-69dc-4a61-ab04-83b999ffc387 (b3e40c5a)
+2025-03-21T23:57:24.5117700+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p5='?' (DbType = Guid), @p0='?' (DbType = Decimal), @p1='?' (DbType = DateTime), @p2='?' (Size = 3), @p3='?' (DbType = DateTime), @p4='?' (Size = 4)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"BankAccounts\" SET \"Balance\" = @p0, \"CreatedAt\" = @p1, \"Currency\" = @p2, \"LastModifiedAt\" = @p3, \"Name\" = @p4
+WHERE \"Id\" = @p5
+RETURNING 1;" (0723d8ff)
+2025-03-21T23:57:24.5128260+03:00  [INF] Updated bank account: "serg" (5a77355c)
+2025-03-21T23:57:24.5128520+03:00  [INF] Updated balance for account "serg": (¤443.00) (8c577bae)
+2025-03-21T23:57:24.5128760+03:00  [INF] Created operation: (¤443.00) for account d0f02e7d-69dc-4a61-ab04-83b999ffc387 (fae87969)
+2025-03-21T23:57:41.0063320+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:57:41.0108070+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:57:41.0127100+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__accountId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"
+WHERE \"o\".\"AccountId\" = @__accountId_0" (0723d8ff)
+2025-03-21T23:57:55.4235660+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:57:55.4267430+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Id\", \"c\".\"CreatedAt\", \"c\".\"Description\", \"c\".\"Name\", \"c\".\"Type\"
+FROM \"Categories\" AS \"c\"" (0723d8ff)
+2025-03-21T23:57:55.4301210+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
+2025-03-21T23:58:11.9135670+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"b\".\"Id\", \"b\".\"Balance\", \"b\".\"CreatedAt\", \"b\".\"Currency\", \"b\".\"LastModifiedAt\", \"b\".\"Name\"
+FROM \"BankAccounts\" AS \"b\"" (0723d8ff)
+2025-03-21T23:58:11.9139860+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"c\".\"Id\", \"c\".\"CreatedAt\", \"c\".\"Description\", \"c\".\"Name\", \"c\".\"Type\"
+FROM \"Categories\" AS \"c\"" (0723d8ff)
+2025-03-21T23:58:11.9141760+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"o\".\"Id\", \"o\".\"AccountId\", \"o\".\"Amount\", \"o\".\"CategoryId\", \"o\".\"CreatedAt\", \"o\".\"Date\", \"o\".\"Description\"
+FROM \"Operations\" AS \"o\"" (0723d8ff)
