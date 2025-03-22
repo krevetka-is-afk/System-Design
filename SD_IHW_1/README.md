@@ -92,7 +92,7 @@ git clone [url-репозитория]
 
 2. Перейдите в директорию проекта:
 ```bash
-cd FinanceManager
+cd System-Design/SD_IHW_1
 ```
 
 3. Восстановите зависимости и соберите проект:
